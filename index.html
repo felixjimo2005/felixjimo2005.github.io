@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Web Brutal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: radial-gradient(circle at top, #1e1b4b, #020617);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* ---------- HERO ---------- */
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: clamp(3.5rem, 7vw, 6rem);
+      font-weight: 800;
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    h1 span { color: #818cf8; }
+
+    header p {
+      margin-top: 20px;
+      font-size: 1.4rem;
+      color: #c7d2fe;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    .buttons {
+      margin-top: 50px;
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      animation: fadeUp 1.8s ease forwards;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 18px 40px;
+      border-radius: 18px;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .primary {
+      background: #6366f1;
+      color: white;
+      box-shadow: 0 20px 40px rgba(99,102,241,.4);
+    }
+
+    .secondary {
+      background: transparent;
+      border: 2px solid #6366f1;
+      color: #a5b4fc;
+    }
+
+    button:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 30px 60px rgba(99,102,241,.6);
+    }
+
+    /* ---------- FEATURES ---------- */
+    section.features {
+      max-width: 1300px;
+      margin: auto;
+      padding: 120px 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background: rgba(255,255,255,.06);
+      backdrop-filter: blur(14px);
+      border-radius: 28px;
+      padding: 50px 35px;
+      text-align: center;
+      transition: transform .4s, background .4s;
+    }
+
+    .card:hover {
+      transform: translateY(-14px);
+      background: rgba(255,255,255,.12);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+
+    .card p { font-size: 1.05rem; color: #c7d2fe; }
+
+    /* ---------- SHOWCASE ---------- */
+    section.showcase {
+      padding: 140px 30px;
+      background: linear-gradient(180deg, transparent, rgba(99,102,241,.08));
+      text-align: center;
+    }
+
+    section.showcase h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    section.showcase p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2rem;
+      color: #c7d2fe;
+    }
+
+    /* ---------- STATS ---------- */
+    section.stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 40px;
+      padding: 120px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat h4 {
+      font-size: 3rem;
+      color: #818cf8;
+    }
+
+    .stat span {
+      color: #c7d2fe;
+    }
+
+    /* ---------- CTA ---------- */
+    section.cta {
+      padding: 160px 30px;
+      text-align: center;
+    }
+
+    section.cta h2 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+    }
+
+    section.cta p {
+      font-size: 1.3rem;
+      color: #c7d2fe;
+      margin-bottom: 50px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 50px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>La mejor <span>web</span> del mundo</h1>
+    <p>HTML · CSS · JavaScript · Diseño de nivel élite</p>
+    <div class="buttons">
+      <button class="primary">Empezar ahora</button>
+      <button class="secondary">Explorar</button>
+    </div>
+  </div>
+</header>
+
+<section class="features">
+  <div class="card"><h3>✨ Diseño premium</h3><p>Animaciones fluidas y estética profesional.</p></div>
+  <div class="card"><h3>⚡ Rendimiento extremo</h3><p>Código optimizado y limpio.</p></div>
+  <div class="card"><h3>📱 Responsive total</h3><p>Perfecta en cualquier dispositivo.</p></div>
+  <div class="card"><h3>🔒 Seguridad</h3><p>Buenas prácticas modernas.</p></div>
+</section>
+
+<section class="showcase">
+  <h2>Esto no es una web</h2>
+  <p>Es una experiencia visual pensada para impresionar desde el primer segundo.</p>
+</section>
+
+<section class="stats">
+  <div class="stat"><h4>+99%</h4><span>Satisfacción</span></div>
+  <div class="stat"><h4>0.2s</h4><span>Carga</span></div>
+  <div class="stat"><h4>24/7</h4><span>Impacto</span></div>
+</section>
+
+<section class="cta">
+  <h2>¿Listo para el siguiente nivel?</h2>
+  <p>Esta web puede ser tuya, adaptada a lo que quieras.</p>
+  <button class="primary">Quiero esta web</button>
+</section>
+
+<footer>
+  © 2026 · Hecho con 💙 y mucho código
+</footer>
+
+</body>
+</html>
