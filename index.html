@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mega Web Brutal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <title>Portfolio de Félix · DAM Developer</title>
+  
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: radial-gradient(circle at top, #1e1b4b, #020617);
@@ -106,45 +110,59 @@
 
     .card p { font-size: 1.05rem; color: #c7d2fe; }
 
-    /* ---------- SHOWCASE ---------- */
-    section.showcase {
+    /* ---------- PORTFOLIO SECTIONS ---------- */
+
+    section.portfolio {
       padding: 140px 30px;
-      background: linear-gradient(180deg, transparent, rgba(99,102,241,.08));
-      text-align: center;
-    }
-
-    section.showcase h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    section.showcase p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.2rem;
-      color: #c7d2fe;
-    }
-
-    /* ---------- STATS ---------- */
-    section.stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-      gap: 40px;
-      padding: 120px 40px;
       max-width: 1200px;
       margin: auto;
     }
 
-    .stat {
+    section.portfolio h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
       text-align: center;
     }
 
-    .stat h4 {
-      font-size: 3rem;
+    section.portfolio p {
+      font-size: 1.2rem;
+      color: #c7d2fe;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .about, .skills, .education, .projects, .contact {
+      margin-bottom: 120px;
+    }
+
+    .skills-list, .edu-list, .proj-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .item {
+      background: rgba(255,255,255,.06);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      transition: .3s;
+    }
+
+    .item:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,.12);
+    }
+
+    .item h4 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
       color: #818cf8;
     }
 
-    .stat span {
+    .item p {
+      font-size: 1rem;
       color: #c7d2fe;
     }
 
@@ -183,11 +201,11 @@
 
 <header>
   <div>
-    <h1>La mejor <span>web</span> del mundo</h1>
-    <p>HTML · CSS · JavaScript · Diseño de nivel élite</p>
+    <h1>Félix · <span>Desarrollador DAM</span></h1>
+    <p>Estudiante de 1º DAM · Técnico en SMR · Apasionado por la tecnología</p>
     <div class="buttons">
-      <button class="primary">Empezar ahora</button>
-      <button class="secondary">Explorar</button>
+      <a href="#portfolio"><button class="primary">Ver Portfolio</button></a>
+      <a href="#contacto"><button class="secondary">Contacto</button></a>
     </div>
   </div>
 </header>
@@ -199,25 +217,70 @@
   <div class="card"><h3>🔒 Seguridad</h3><p>Buenas prácticas modernas.</p></div>
 </section>
 
-<section class="showcase">
-  <h2>Esto no es una web</h2>
-  <p>Es una experiencia visual pensada para impresionar desde el primer segundo.</p>
-</section>
+<!-- ---------- PORTFOLIO COMPLETO ---------- -->
 
-<section class="stats">
-  <div class="stat"><h4>+99%</h4><span>Satisfacción</span></div>
-  <div class="stat"><h4>0.2s</h4><span>Carga</span></div>
-  <div class="stat"><h4>24/7</h4><span>Impacto</span></div>
+<section id="portfolio" class="portfolio">
+
+  <!-- SOBRE MÍ -->
+  <div class="about">
+    <h2>Sobre mí</h2>
+    <p>Soy Félix, estudiante de 1º DAM en el IES Leonardo da Vinci y titulado en SMR por el IES Cristóbal Pérez Pastor de Tobarra. Me encanta aprender, crear y enfrentarme a retos. Trabajo mejor bajo presión: cuando el tiempo corre, saco mi mejor versión.  
+    Mi objetivo es convertirme en un desarrollador capaz de crear aplicaciones útiles, eficientes y con un diseño cuidado.</p>
+  </div>
+
+  <!-- HABILIDADES -->
+  <div class="skills">
+    <h2>Habilidades</h2>
+    <div class="skills-list">
+      <div class="item"><h4>HTML · CSS</h4><p>Maquetación moderna y con animaciones.</p></div>
+      <div class="item"><h4>Java</h4><p>Programación orientada a objetos y proyectos básicos.</p></div>
+      <div class="item"><h4>MySQL</h4><p>Diseño de bases de datos, consultas y gestión.</p></div>
+      <div class="item"><h4>Redes y Sistemas</h4><p>Conocimientos sólidos gracias a SMR.</p></div>
+      <div class="item"><h4>Trabajo bajo presión</h4><p>Rindo al máximo cuando hay plazos ajustados.</p></div>
+      <div class="item"><h4>Aprendizaje rápido</h4><p>Capacidad para adaptarme y mejorar constantemente.</p></div>
+    </div>
+  </div>
+
+  <!-- FORMACIÓN -->
+  <div class="education">
+    <h2>Formación</h2>
+    <div class="edu-list">
+      <div class="item"><h4>📘 1º DAM</h4><p>IES Leonardo Da Vinci · Albacete</p></div>
+      <div class="item"><h4>💻 SMR</h4><p>IES Cristóbal Pérez Pastor · Tobarra.</p></div>
+    </div>
+  </div>
+
+  <!-- PROYECTOS -->
+  <div class="projects">
+    <h2>Proyectos</h2>
+    <p>Estoy empezando, pero ya tengo proyectos en desarrollo y otros planificados.</p>
+    <div class="proj-list">
+      <div class="item"><h4>Gestor de Tareas</h4><p>Aplicación en Java para organizar tareas con interfaz simple.</p></div>
+      <div class="item"><h4>Portfolio Web</h4><p>Esta misma web, diseñada desde cero y en constante mejora.</p></div>
+      <div class="item"><h4>Próximamente</h4><p>Nuevos proyectos en camino.</p></div>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <div id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <p>Puedes escribirme para colaborar, aprender juntos o proponer proyectos.</p>
+    <div class="skills-list">
+      <div class="item"><h4>Email</h4><p>felixjimo2005@outlook.es</p></div>
+
+    </div>
+  </div>
+
 </section>
 
 <section class="cta">
-  <h2>¿Listo para el siguiente nivel?</h2>
-  <p>Esta web puede ser tuya, adaptada a lo que quieras.</p>
-  <button class="primary">Quiero esta web</button>
+  <h2>¿Quieres contactar conmigo?</h2>
+  <p>Estoy abierto a colaborar, aprender y crear nuevos proyectos.</p>
+  <a href="#contacto"><button class="primary">Enviar mensaje</button></a>
 </section>
 
 <footer>
-  © 2026 · Hecho con 💙 y mucho código
+  © 2026 · Portfolio de Félix · Hecho con 💙 
 </footer>
 
 </body>
